@@ -14,8 +14,6 @@
 - ``H2 Database``
 - ``maven``
 
-## 📁 Acesso ao projecto hospedado
-
 
 ## 📁 Acesso ao projecto local
 - Clone este repositorio ou baixe o arquivo .zip;
@@ -38,11 +36,11 @@
 
 
 
-[](img/angular1.png)
+![home page](img/angular1.png)
 
-[](img/angular2.png)
+![form](img/angular2.png)
 
-[](img/angular3.png)
+![cards](img/angular3.png)
 
 ### Colaborador
 
