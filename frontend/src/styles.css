@@ -1,0 +1,73 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+#main-container{
+   width: 90vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   /* justify-content: center; */
+   margin: 0 auto;
+  
+}
+
+.fill-remain-space{
+  flex: 1 1 auto;
+}
+
+.controles-container{
+    width: 100%;
+    padding: 5%;
+}
+
+ .controles-container > * {
+    width: 100%;
+}
+
+.button-row button{
+  margin-left: 5px;
+}
+
+snack-bar-container success{
+  background-color: rgb(48, 201, 48);
+  color: #fff;
+}
+
+snack-bar-container.notification simple-snack-bar{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ya{
+   background-color: rgb(32, 88, 210);
+   color: #fff;
+   border-radius: 5px;
+}
+
+
+
+:host /deep/ .mat-paginator-range-label{
+  display: none;
+}
+
+ ::ng-deep mat-paginator-page-size{
+    display: none !important;
+}
+
+::ng-deep mat-paginator-range-label{
+    display: none !important;
+}

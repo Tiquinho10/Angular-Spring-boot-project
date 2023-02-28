@@ -1,0 +1,48 @@
+<app-header></app-header>
+
+<div id="main-container">
+   
+  <div class="add-container">
+    <button mat-raised-button color="primary" (click)="onCreate()">Adicionar</button>
+    <hr class="btn-separator">
+  </div>
+  
+  <div class="card-container" *ngIf="!((dataObs$ | async)?.length == 0); else notFound">
+    <div class="card"*ngFor="let student of dataObs$ | async ">
+      <div ></div>
+       <div class="header">
+          <div class="profile-description">
+             <p class="name"> <span class="bold">Nome :</span>  {{student.name | titlecase}}</p>
+             <p class="course"><span class="bold">Curso :</span>  {{student.course | titlecase}}</p>
+          </div>
+          <div class="profile-pic">
+            <img  [src] ="defaultImg(student)">
+  </div>
+       </div>
+       <hr class="section-separator">
+       <div class="main">
+           <p> <span class="bold">Email :</span>  {{student.email}}</p>
+           <hr class="separator">
+           <p><span class="bold">Idade : </span> {{student.age}}</p>
+           <hr class="separator">
+           <p><span class="bold">Sexo : </span> {{student.gender}}</p>
+       </div>
+       <hr class="section-separator">
+       <div class="footer">
+        <button class="btn-edit" (click)="onEdit(student)">editar</button>
+        <button class="btn-remove" (click)="removeStudent(student)">remover</button>
+       </div>
+    </div>
+ </div>
+ <div >
+   <mat-paginator  [pageSize]="4" [hidePageSize]="true">
+
+ </mat-paginator>
+ </div>
+
+ <ng-template #notFound>
+         <p>Nenhum Estudante cadastrado</p>
+ </ng-template>
+ 
+</div>
+

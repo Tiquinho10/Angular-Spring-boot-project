@@ -1,0 +1,36 @@
+{
+  "futuras": [
+    {
+      "id": 1,
+      "name": "saria",
+      "chance": "low",
+      "seeFuture": "maybe"
+    },
+    {
+      "id": 2,
+      "name": "Daniela",
+      "chance": "high",
+      "seeFuture": "yes"
+    }
+  ],
+  "clubs": [
+    {
+      "id": 1,
+      "name": "man city",
+      "nickname": "blues",
+      "titles": 5
+    },
+    {
+      "id": 2,
+      "name": "real madrid",
+      "nickname": "merrengues",
+      "titles": 9
+    },
+    {
+      "id": 3,
+      "name": "Benfica",
+      "nickname": "aguias",
+      "titles": 7
+    }
+  ]
+}

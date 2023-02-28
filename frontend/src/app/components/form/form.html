@@ -1,0 +1,53 @@
+<mat-toolbar>
+  <span>{{service.form.controls['id'].value? "Editar Estudante" : "Novo Estudante"}}</span>
+  <span class="fill-remain-space"></span>
+    <button class="close-btn" aria-label="Example icon button with a exit icon" (click)="onExit()">
+        <span>{{'x' | uppercase}}</span></button>
+</mat-toolbar>
+<form [formGroup]="service.form" class="normal-form">
+   
+    <mat-grid-list rowHeight="300px"   [cols]=$any(2)>
+        <mat-grid-tile>
+             <div class="controles-container">
+                    <input type="hidden" formControlName="id">
+                    <mat-form-field>
+                        <input formControlName="name" matInput placeholder="Digite o seu nome">
+                        <mat-error *ngIf="service.form.controls['name'].errors?.['required']">este campo e obrigatorio.</mat-error>
+                        <mat-error *ngIf="service.form.controls['name'].errors?.['minlength']">digite no minimo 3 caracteres</mat-error>
+                     </mat-form-field>
+                     <mat-form-field>
+                         <input formControlName="email" matInput placeholder="Digite o seu email">
+                         <mat-error>digite um email valido</mat-error>
+                        </mat-form-field>
+
+                </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="add-bottom-padding controles-container">
+                <mat-radio-group formControlName="gender">
+                  <mat-radio-button value="M">Masculino</mat-radio-button>
+                  <mat-radio-button value="F">Feminino</mat-radio-button>
+                </mat-radio-group>
+                <mat-form-field>
+                   <mat-select formControlName="course" placeholder="Selecione um curso">
+                      <mat-option>Nenhum</mat-option>
+                        <ng-container *ngFor="let course of courses">
+                           <mat-option value="{{course.value}}">{{course.value | titlecase}}</mat-option>
+                        </ng-container>
+                   </mat-select>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input formControlName="dob" matInput [matDatepicker]="picker" placeholder="Data de Nascimento">
+                   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                   <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+
+                  <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid" (click)="onSubmit()">Enviar</button>
+                    <button mat-raised-button color="warn" type="" (click)="onClear()">Limpar</button>
+                  </div>
+            </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+</form>
