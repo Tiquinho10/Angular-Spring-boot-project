@@ -1,11 +1,13 @@
 package com.tique.dev.rest.model;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.*;
+
 
 @Entity
 @Table(name = "tb_student")

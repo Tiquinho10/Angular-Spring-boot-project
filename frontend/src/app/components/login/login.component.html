@@ -1,0 +1,17 @@
+<div class="container">
+    
+    <form  [formGroup]="service.form" class="normal-form">
+      <h1>Login</h1>
+        <mat-form-field>
+            <input matInput placeholder="Digite o seu username" formControlName="username">
+      </mat-form-field> 
+      
+      <mat-form-field>
+        <input matInput placeholder="Digite a sua password" formControlName="password" type="password">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid" (click)="onLogin()">Enviar</button>
+
+   </form>
+</div>
+
