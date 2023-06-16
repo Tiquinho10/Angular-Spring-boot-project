@@ -3,16 +3,17 @@ header{
     height: 8vh;
     background-color: rgb(40, 38, 38);
     color: #fff;
+    padding: 4px 10px;
 }
 
 nav{
     display: flex;
 }
 
-.add-btn{
+button{
     padding:2px 4px;
     border-radius: 5px;
     color: #fff;
-    background-color: rgb(28, 132, 218);
+    background-color: rgb(218, 28, 41);
     font-weight: 600;
 }

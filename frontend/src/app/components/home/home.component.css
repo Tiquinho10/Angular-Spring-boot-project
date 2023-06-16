@@ -1,0 +1,118 @@
+.card-container{
+    width: 85vw;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+  flex-wrap: wrap;
+}
+
+.card{
+    width: 310px;
+    height: 300px;
+    margin-right: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 10px;
+
+}
+
+.card .header{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card img{
+width: 60px;
+height: 60px;
+margin-top: 15px;
+border-radius: 50%;
+}
+
+.profile-description{
+    margin-top: 50px;
+}
+
+.main p{
+    margin-left: 10px;
+}
+
+.bold{
+    font-weight: 700;
+    color: gray;
+}
+
+.add-container{
+    width: 80vw;
+    align-self: start;
+    margin: 1px 35px;
+  }
+
+  .btn-separator{
+    width: 106px;
+    margin-left: 10px;
+    border: 4px solid  #f2c4c4;
+    border-radius: 5px;
+  }
+
+  .add-container button{
+    margin: 5px 10px;
+  }
+
+.separator{
+    width:  95%;
+    height: 1px;
+    color: rgb(72, 69, 69);
+    margin: 0 auto;
+}
+
+.section-separator{
+    width:  95%;
+    height: 1px;
+    color: rgb(11, 121, 223);
+    margin: 0 auto;
+
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-edit{
+    background-color: rgb(76, 139, 119);
+    color: white;
+    border: none;
+    width: 55px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-remove{
+    background-color: red;
+    color: white;
+    border: none;
+    min-width: 55px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+:host ::ng-deep .mat-mdc-paginator {
+
+    color: #fff;
+    border-radius: 10px;
+  }
+
+:host ::ng-deep .mat-mdc-paginator-range-label{
+    display: none;
+}
+
+:host ::ng-deep .mat-mdc-paginator-range-actions button{
+        background-color: #f2c4c4;
+        margin-right: 3px;
+}
